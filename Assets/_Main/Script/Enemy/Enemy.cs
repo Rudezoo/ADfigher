@@ -176,6 +176,8 @@ public class Enemy : MonoBehaviour //normal,speed,bomb, small(for Boss type2) Ÿ
                 Base.instance.TakeDamage(damage);
                 SoundManager.instance.playBoomSound();
                 InGameManager.instance.Particle(boomEffect, transform);
+                InGameManager.instance.killcount++;
+                InGameManager.instance.waveEnemyCntTxt.text = "Enemy: " + (EnemySpawner.instance.total_enemyCount - InGameManager.instance.killcount);
                 Destroy(gameObject);
                 Handheld.Vibrate();
             }
