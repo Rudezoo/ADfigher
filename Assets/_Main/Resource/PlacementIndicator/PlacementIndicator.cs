@@ -36,6 +36,7 @@ public class PlacementIndicator : MonoBehaviour
             {
                 visual.SetActive(true);
                 InGameManager.instance.placeBtn.SetActive(true);
+                InGameManager.instance.moveScreen.SetActive(false);
             }
                 
         }
