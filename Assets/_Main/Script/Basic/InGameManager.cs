@@ -42,7 +42,7 @@ public class InGameManager : MonoBehaviour //InGame에서의 모든 컨트롤을 관리한다
     public GameObject winScreen; //승리 화면
     public GameObject loseScreen; //패배 화면
 
-
+    public GameObject moveScreen;
 
 
     public static InGameManager instance;
@@ -68,6 +68,8 @@ public class InGameManager : MonoBehaviour //InGame에서의 모든 컨트롤을 관리한다
         DiffTxt.text = diff.ToString(); //난이도 표시 UI 설정
         DiffTxt.gameObject.SetActive(true);
         backButton.SetActive(true);
+
+        moveScreen.SetActive(true);
     }
 
     // Update is called once per frame
